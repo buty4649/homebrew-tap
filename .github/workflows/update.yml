@@ -24,7 +24,7 @@ jobs:
       - name: Test formula
         shell: bash
         run: |
-          mkdir $(brew --repo)/Library/Taps/buty4649/homebrew-tap
+          mkdir -p $(brew --repo)/Library/Taps/buty4649/homebrew-tap
           cp -Rp . $(brew --repo)/Library/Taps/buty4649/homebrew-tap
           brew install buty4649/homebre-tap/rf
 
