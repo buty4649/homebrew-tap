@@ -6,22 +6,22 @@ class Rf < Formula
   on_macos do
     if Hardware::CPU.arm?
       url 'https://github.com/buty4649/rf/releases/download/v0.2.0/rf-v0.2.0-darwin-arm64.zip'
-      sha256 '939f9baeef74c635e53e35525a5c870ebe12d9d9515d049160ba4b3fcdbbf5f0'
+      sha256 '370082080f9896c4d118b71e3b4eaf128ea9f89e7ecfa0a95fb8a26a242dc120'
     end
     if Hardware::CPU.intel?
       url 'https://github.com/buty4649/rf/releases/download/v0.2.0/rf-v0.2.0-darwin-amd64.zip'
-      sha256 'c696bf2d786990e62486df823035239bd34e16ac705c5b7df55d2b22542cfcea'
+      sha256 '14502f1ba004a7b5543477af72195f37a92521c23eb5472cb2173e01918ee739'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url 'https://github.com/buty4649/rf/releases/download/v0.2.0/rf-v0.2.0-linux-arm64.tar.gz'
-      sha256 '88291a923faf9a5135481c85220817a289d1c8374363f88a2b3a547701b86cb1'
+      sha256 '7bf3670a9dd110a77c64a10720b50293150113f384996f82e3d367160cef421c'
     end
     if Hardware::CPU.intel?
       url 'https://github.com/buty4649/rf/releases/download/v0.2.0/rf-v0.2.0-linux-amd64.tar.gz'
-      sha256 'ad304e88a5689631ec5891abd3191cc85c91be02dcb741177c6b787dd7c41dfe'
+      sha256 'b0c62d91ece408d25e0de3f44c5976295bdfc62059ae45eb8a0aeaff3febd015'
     end
   end
 
