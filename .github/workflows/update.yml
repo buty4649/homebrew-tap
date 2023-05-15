@@ -22,7 +22,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Test formula
-        shell: /bin/bash
+        shell: bash
         run: |
           cp -Rp . $(brew --repo)/Library/Taps/buty4649/homebrew-tap
           brew install buty4649/homebre-tap/rf
