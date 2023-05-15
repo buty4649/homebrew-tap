@@ -21,6 +21,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Test formula
+        shell: /bin/bash
+        run: |
+          cp -Rp . $(brew --repo)/Library/Taps/buty4649/homebrew-tap
+          brew install buty4649/homebre-tap/rf
+
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
