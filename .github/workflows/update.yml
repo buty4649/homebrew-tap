@@ -26,7 +26,7 @@ jobs:
         run: |
           mkdir -p $(brew --repo)/Library/Taps/buty4649/homebrew-tap
           cp -Rp . $(brew --repo)/Library/Taps/buty4649/homebrew-tap
-          brew install buty4649/homebre-tap/rf
+          brew install buty4649/homebrew-tap/rf
 
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@v4
