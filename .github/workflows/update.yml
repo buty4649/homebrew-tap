@@ -24,5 +24,5 @@ jobs:
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: *.rb
+          file_pattern: "*.rb"
           commit_message: Update formulae
