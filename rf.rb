@@ -1,27 +1,27 @@
 class Rf < Formula
   desc 'rf is Ruby powered text/json/yaml filter'
-  version '0.2.0'
+  version '1.0.0'
   homepage 'https://github.com/buty4649/rf'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/buty4649/rf/releases/download/v0.2.0/rf-v0.2.0-darwin-arm64.zip'
-      sha256 '370082080f9896c4d118b71e3b4eaf128ea9f89e7ecfa0a95fb8a26a242dc120'
+      url 'https://github.com/buty4649/rf/releases/download/v1.0.0/rf-v1.0.0-darwin-arm64.zip'
+      sha256 'bdb3d12c9fb830eca33ab8377d8fcfb4cfd7d35c2517d35dfe3b7df603779181'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/buty4649/rf/releases/download/v0.2.0/rf-v0.2.0-darwin-amd64.zip'
-      sha256 '14502f1ba004a7b5543477af72195f37a92521c23eb5472cb2173e01918ee739'
+      url 'https://github.com/buty4649/rf/releases/download/v1.0.0/rf-v1.0.0-darwin-amd64.zip'
+      sha256 'bf62d0819b0942b19d479226eb37c0b08a83333c5d3bd029d3896a349078f8ec'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/buty4649/rf/releases/download/v0.2.0/rf-v0.2.0-linux-arm64.tar.gz'
-      sha256 '7bf3670a9dd110a77c64a10720b50293150113f384996f82e3d367160cef421c'
+      url 'https://github.com/buty4649/rf/releases/download/v1.0.0/rf-v1.0.0-linux-arm64.tar.gz'
+      sha256 'b38b04342849085cc8e65227fbcfe083c6afc076ef7da1871f78d0a843a3b418'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/buty4649/rf/releases/download/v0.2.0/rf-v0.2.0-linux-amd64.tar.gz'
-      sha256 'b0c62d91ece408d25e0de3f44c5976295bdfc62059ae45eb8a0aeaff3febd015'
+      url 'https://github.com/buty4649/rf/releases/download/v1.0.0/rf-v1.0.0-linux-amd64.tar.gz'
+      sha256 '02dc50d137b85bc238bf1a94f96500ad651b78105c358bf2d4d84303e8ee56f1'
     end
   end
 
