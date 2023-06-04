@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '00 3 * * 1'
 
+permissions:
+  contents: write
+
 jobs:
   update:
     runs-on: macos-latest
