@@ -1,0 +1,42 @@
+name: Install test
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  test_on_macos:
+    runs-on: macos-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Test formula
+        shell: bash
+        run: |
+          mkdir -p $(brew --repo)/Library/Taps/buty4649/homebrew-tap
+          cp -Rp . $(brew --repo)/Library/Taps/buty4649/homebrew-tap
+          brew install buty4649/homebrew-tap/rf
+
+  test_on_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: setup
+        shell: bash
+        run: |
+          apt-get update
+          apt-get install build-essential procps curl file git
+
+      - name: Set up Homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+
+      - name: Test formula
+        shell: bash
+        run: |
+          mkdir -p $(brew --repo)/Library/Taps/buty4649/homebrew-tap
+          cp -Rp . $(brew --repo)/Library/Taps/buty4649/homebrew-tap
+          brew install buty4649/homebrew-tap/rf

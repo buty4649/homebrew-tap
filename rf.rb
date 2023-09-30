@@ -1,39 +1,31 @@
 class Rf < Formula
   desc 'rf is Ruby powered text/json/yaml filter'
-  version '1.5.0'
+  version '1.6.0'
   homepage 'https://github.com/buty4649/rf'
 
   on_macos do
     if Hardware::CPU.arm?
-      url 'https://github.com/buty4649/rf/releases/download/v1.5.0/rf-v1.5.0-darwin-arm64.zip'
-      sha256 '4800a3aef3b8a10c30209dda47f8f00cc3503b14e8e8e9d5551e210f35182cae'
+      url 'https://github.com/buty4649/rf/releases/download/v1.6.0/rf-v1.6.0-darwin-arm64.zip'
+      sha256 'd3fa8f5224edde2a06fcaa9750d307a32cc084e8787447930d58b42a17e38240'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/buty4649/rf/releases/download/v1.5.0/rf-v1.5.0-darwin-amd64.zip'
-      sha256 'b45b3258be7e4fab76efa73dd6e4a3942a24110d712990c4470cf9abfd944679'
+      url 'https://github.com/buty4649/rf/releases/download/v1.6.0/rf-v1.6.0-darwin-amd64.zip'
+      sha256 '80aba02deb898fbb542f4f27ab99e20fef5f4b5d2763df623a52d36ce3f24266'
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url 'https://github.com/buty4649/rf/releases/download/v1.5.0/rf-v1.5.0-linux-arm64.tar.gz'
-      sha256 'f400ec1793748fc86460c4485888485c37988beed9f75a87559830e0a7c11bf9'
+      url 'https://github.com/buty4649/rf/releases/download/v1.6.0/rf-v1.6.0-linux-arm64.tar.gz'
+      sha256 '45fb515e5a085627a3642df47a582173a269bd15db5ac6a43a4a7fe64c1c903f'
     end
     if Hardware::CPU.intel?
-      url 'https://github.com/buty4649/rf/releases/download/v1.5.0/rf-v1.5.0-linux-amd64.tar.gz'
-      sha256 '7c65f6690fa6747c0bd9d5bfa3e77ca8b54de41b71d5ff18088411e4f58fce0b'
+      url 'https://github.com/buty4649/rf/releases/download/v1.6.0/rf-v1.6.0-linux-amd64.tar.gz'
+      sha256 '3416ee3fd7a94895253b3a8c77f03c96f73819f6202e0a7272e44ea72589a868'
     end
-  end
-
-  head do
-    url 'https://github.com/buty4649/rf.git'
-    depends_on 'go' => :build
   end
 
   def install
-    if build.head?
-      system 'make', 'build'
-    end
     bin.install 'rf'
   end
 end
