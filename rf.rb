@@ -8,10 +8,6 @@ class Rf < Formula
       url 'https://github.com/buty4649/rf/releases/download/v1.18.1/rf-v1.18.1-darwin-arm64.zip'
       sha256 'be0bada9144f35dfd7251d5644b51eec4dc7d4b6f5285cb52319b2fee91c9816'
     end
-    if Hardware::CPU.intel?
-      url 'https://github.com/buty4649/rf/releases/download/v1.17.0/rf-v1.17.0-darwin-amd64.zip'
-      sha256 'd9829c59e69a93587c13ae91612bd9f626b35472e92a2e28bf717acc95e8bfbc'
-    end
   end
 
   on_linux do
